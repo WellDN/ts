@@ -7,7 +7,7 @@ type Point = { //this form is called object type (as we saw before)
 }
 
 // Exactly the same as the early example
-function printCoord(pt: Point) {
+function printCooord(pt: Point) {
     console.log("The coordinate's x value is " + pt.x);
     console.log("The coordinate's y value is " + pt.y);
 }

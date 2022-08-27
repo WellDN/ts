@@ -5,7 +5,7 @@ interface Pointt {
     y: number;
 }
 
-function printCooord(pt: Pointt) {
+function printCooorrd(pt: Pointt) {
     console.log("The coordinate's x value is " + pt.x);
     console.log("The coordinate's y value is " + pt.y);
 }

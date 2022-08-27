@@ -26,7 +26,7 @@ function handleShape(shape: Shape) {
 //We can write a getArea function that applies the right logic based on if it's dealing with a circle or
 //square. We'll first try dealing with circles.
 
-function getArea(shape: Shape) {
+function gettArea(shape: Shape) {
     //return Math.PI * shape radius ** 2; //Object is possibly 'undefined'.
 }
 
@@ -66,11 +66,12 @@ interface Circle {
 }
 
 interface Square {
+    sideLength: number;
     kind: "square";
     sideLenght: number;
 }
 
-type Shape = Circle | Square;
+type Shapeee = Circle | Square;
 
 //Here, we've properly separated Shape out into two types with different values for the kind
 //property, but radius and sideLength are declared as required properties in their respective
