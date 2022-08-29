@@ -18,7 +18,7 @@ For Example, notice that in the list above, typeof doesn't return string null. C
 
 */
 
-/*function printAll(strs: string | string[] | null) {
+function printAll(strs: string | string[] | null) {
     if (typeof strs === "object") {
         for (const s of strs) {
             //Object is possibly 'null' on strs.
@@ -31,11 +31,11 @@ For Example, notice that in the list above, typeof doesn't return string null. C
     }
 } 
 
-In the printAll function, we try to check if strs is an object to see if it's an array type (now
-might be a good time to reinforce that arrays are object types in JavaScript). But it turns out that in
-JavaScript, typeof null is actually "object" ! This is one of those unfortunate accidents of
-history.
-Users with enough experience might not be surprised, but not everyone has run into this in
-JavaScript; luckily, TypeScript lets us know that strs was only narrowed down to string[] |
-null instead of just string[] .
-This might be a good segue into what we'll call "truthiness" checking.*/
+//In the printAll function, we try to check if strs is an object to see if it's an array type (now
+//might be a good time to reinforce that arrays are object types in JavaScript). But it turns out that in
+//JavaScript, typeof null is actually "object" ! This is one of those unfortunate accidents of
+//history.
+//Users with enough experience might not be surprised, but not everyone has run into this in
+//JavaScript; luckily, TypeScript lets us know that strs was only narrowed down to string[] |
+//null instead of just string[] .
+//This might be a good segue into what we'll call "truthiness" checking.*///
