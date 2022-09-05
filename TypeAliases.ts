@@ -1,7 +1,7 @@
 //it's common to want to use object types and unions types more than once and refer to it by a single name.
 //a type alias exactly that - a name for any type. The syntax for a type alias is:
 
-type Point = { //this form is called object type (as we saw before)
+type Point = {
     x: number;
     y: number;
 }
