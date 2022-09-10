@@ -21,4 +21,3 @@ let bmi = weight / height ** 2;
       break;
   }
 }
-
