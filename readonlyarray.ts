@@ -1,4 +1,4 @@
-//The ReadonlyArray is a special type that describes arrays that shouldn't be changed.
+/*//The ReadonlyArray is a special type that describes arrays that shouldn't be changed.
 
 function doStuff(values: ReadonlyArray<string>) {
     //We can read from 'values'...
@@ -49,3 +49,4 @@ y = x;
 
 //The type 'readonly string[]' is 'readonly' and cnanot be assigned to the mutable type 'string[]'.
 
+*/

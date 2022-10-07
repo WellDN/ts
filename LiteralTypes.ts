@@ -20,9 +20,9 @@ constantString;
 
 //By themselves, literal types aren't very valuable:
 
-let x: "hello" = "hello";
+//let x: "hello" = "hello";
 // OK
-x = "hello";
+//x = "hello";
 // ...
 /*x = "howdy";
     Type '"howdy"' is not assinable to type '"Hello"'.
@@ -69,9 +69,9 @@ configure("auto");
 //When you initialize a variable with an object, Typescript assumes that the properties of that object might change values later.
 //For example, if you wrote code like this:
 
-const obj = { counter: 0 };
+//const obj = { counter: 0 };
 //if (someCondition) {
-    obj.counter = 1;
+//    obj.counter = 1;
 //}
 
 //TypeScript doesn't assume the assignment of 1 to a field which previously had 0 is an error.

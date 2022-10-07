@@ -13,17 +13,17 @@ type BBox = {
     contents: "hello world",
 };
 
-let x: BBox = {
-    contents: "hello world",
-};
+//let x: BBox = {
+//    contents: "hello world",
+//};
 
-//we could check 'x.contents'
-if (typeof x.contents === "string") {
-    console.log(x.contents.toLowerCase());
-}
-
-//or we could use a type assertion
-console.log((x.contents as string).toLowerCase());
+////we could check 'x.contents'
+//if (typeof x.contents === "string") {
+//    console.log(x.contents.toLowerCase());
+////}
+//
+////or we could use a type assertion
+//console.log((x.contents as string).toLowerCase());
 
 //One type safe approach would be to instead scaffold out different Box types for every type of
 //contents .

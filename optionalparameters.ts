@@ -1,4 +1,4 @@
-//Optional Parameters
+/*//Optional Parameters
 //Functions in JavaScript often take a variable number of arguments. For example, the toFixed
 //method of number takes an optional digit count:
 
@@ -71,4 +71,4 @@ myForEach([1, 2, 3], (a, i) => {
 //arguments are simply ignored. TypeScript behaves the same way. Functions with fewer parameters
 //(of the same types) can always take the place of functions with more parameters.
 //When writing a function type for a callback, never write an optional parameter unless you intend to call the
-//function without passing that argument
+//function without passing that argument*/

@@ -33,13 +33,13 @@ const u = firstElement([]);
 //We can use multiple type parameters as well. For example, a standalone version of map would look
 //like this:
 
-function map<Input, Output>(arr: Input[], func: (arg: Input) => Output): Output[] {
-    return arr.map(func);
-}
+//function map<Input, Output>(arr: Input[], func: (arg: Input) => Output): Output[] {
+//    return arr.map(func);
+//}
 
 //Parameter 'n' is of type 'string'
 //'parsed' is of type 'number[]'
-const parsed = map(["1", "2", "3"], (n) => parseInt(n));
+//const parsed = map(["1", "2", "3"], (n) => parseInt(n));
 
 //Note that in this example, TypeScript could infer both the type of the Input type parameter (from
 //the given string array), as well as the Output type parameter based on the return value of the
@@ -65,7 +65,7 @@ const longerArray = longest([1, 2], [1, 2, 3]);
 //longestString is of type 'alice' | 'bub'
 const longerString = longest("alice", "bob");
 //Error! numbers don't have a 'length' property
-const notOk = longest(10, 100);
+//const notOk = longest(10, 100);
 
 //Argument of type 'number' is not assignable to parameter of type '{
 //length: number; }'.
@@ -85,20 +85,20 @@ const notOk = longest(10, 100);
 //Working with Constrained Values
 //Here's a common error when working with generic constraints:
 
-function minimumLength<T extends { length: number}>(
-    obj: T
-    minimum: number
-): T {
-    if (obj.length >= minimum) {
-        return obj;
-    } else {
-        return { length: minimum};
-//Type '{ length: number; }' is not assignable to type 'Type'.
-//'{ length: number; }' is assignable to the constraint of type 'Type',
-//but 'Type' could be instantiated with a different subtype of constraint
-//'{ length: number; }
-    }
-}
+//function minimumLength<T extends { length: number}>(
+//    obj: T
+//    minimum: number
+//): T {
+//    if (obj.length >= minimum) {
+////        return obj;
+////    } else {
+////        return { length: minimum};
+////Type '{ length: number; }' is not assignable to type 'Type'.
+////'{ length: number; }' is assignable to the constraint of type 'Type',
+////but 'Type' could be instantiated with a different subtype of constraint
+////'{ length: number; }
+//    }
+//}
 
 //It might look like this function is OK - Type is constrained to { length: number } , and the
 //function either returns Type or a value matching that constraint. The problem is that the function
@@ -106,10 +106,10 @@ function minimumLength<T extends { length: number}>(
 //constraint. If this code were legal, you could write code that definitely wouldn't work:
 
 // 'arr' gets value { length: 6 }
-const arr = minimumLength([1, 2, 3], 6);
+//const arr = minimumLength([1, 2, 3], 6);
 //and crashes here because arrays have
 // a 'slice' method, but not the returned object!
-console.log(arr.slice(0));
+//console.log(arr.slice(0));
 
 //Specifying Type Arguments
 //TypeScript can usually infer the intended type arguments in a generic call, but not always. For
@@ -121,7 +121,7 @@ function combine<T>(arr1: T[], arr2: T[]): T[] {
 
 //Normally it would be an error to call this function with mismatched arrays:
 
-const arrr = combine ([1, 2, 3], ["hello"]);
+//const arrr = combine ([1, 2, 3], ["hello"]);
 //Type 'string' is not assignable to type 'number'.
 
 //if you intended to this, however, you could manually specify Type:

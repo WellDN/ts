@@ -1,4 +1,4 @@
-//As with other JavaScript language features, TypeScript adds type
+/*//As with other JavaScript language features, TypeScript adds type
 //annotations and other syntax to allow you to express relationships between classes and other types.
 //Class Members
 //Here's the most basic class - an empty one:
@@ -904,9 +904,9 @@ function fn(this: SomeType, x: number) {
 }
 
 //JavaScript output
-function fnn/*(fn)*/(x) {
+function fnn/*(fn)*///(x) {
     //..
-}
+/*}
 
 //TypeScript checks that calling a function with a this parameter is done so with a correct context.
 //Instead of using an arrow function, we can add a this parameter to method definitions to
@@ -1225,3 +1225,4 @@ ffn(window);
 fnn({});
 fnn(fn);
 
+/* */

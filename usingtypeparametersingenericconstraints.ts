@@ -3,14 +3,15 @@
 //accidentally grabbing a property that does not exist on the obj , so we'll place a constraint between
 //the two types:
 
-function getProperty<T, Key extends keyof T>(obj: T, key: Key) {
-    return obj[key];
-}
-
-let x = { a: 1, b: 2, c: 3, d: 4 };
-
-getProperty(x, "a");
-getProperty(x, "m");
-
-//Argument of "m" is not assignable parameter '"a" | "b" | "c" | "d"'.
-
+//function getProperty<T, Key extends keyof T>(obj: T, key: Key) {
+//    return obj[key];
+//}
+//
+//let x = { a: 1, b: 2, c: 3, d: 4 };
+//
+//getProperty(x, "a");
+//getProperty(x, "m");
+//
+////Argument of "m" is not assignable parameter '"a" | "b" | "c" | "d"'.
+//
+//
