@@ -33,12 +33,6 @@ console.log(x);
 
 
 
-
-
-
-
-
-
 //const _map = <A, B>(f: (el: A) => B, l: List<A>): List<B> => {   //no recursion using for
 //    if(isEmpty(l)) {
 //        return empty;
