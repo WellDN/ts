@@ -1,3 +1,4 @@
+namespace LiteralTypes { 
 //In addition to the general types string and number , we can refer to specific strings and numbers
 //in type positions.
 //One way to think about this is to consider how JavaScript comes with different ways to declare a
@@ -79,7 +80,7 @@ configure("auto");
 //types are used to determine both reading and writing behavior.
 //The same applies to strings:
 
-const req = { url: "https://example.com", method: "GET" };
+const rreq = { url: "https://example.com", method: "GET" };
 //handleRequest(req.url, req.method);
 
 //Argument of type 'string' is not assignable to parameter of type '"GET" | "POST"'.
@@ -102,9 +103,21 @@ const reqq = { url: "https://example.com", method: "GET" as "GET" };
 //for other reasons that req.method has the value "GET" ".
 //2. You can use as const to convert the entire object to be type literals:
 
-//const req = { url: "https://example.com", method: "GET" } as const;
+const req = { url: "https://example.com", method: "GET" } as const;
 //handleRequest(req.url, req.method);
 
 //The as const suffix acts like const but for the type system, ensuring that all properties are
 //assigned the literal type instead of a more general version like string or number.
 
+
+function ccompare(a: string, b:string): -1 | 0 | 1 {
+    return a === b ? 0 : a > b ? 1 : -1;
+}
+
+
+
+
+
+
+
+}

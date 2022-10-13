@@ -18,6 +18,7 @@ const map = <A, B>(f: (el: A) => B, l: List<A>): List<B> => {   //recursion
         const element = f(l.element);
         const next = map(f, l.next);
         return append(element, next);
+        
     }
 }
 
