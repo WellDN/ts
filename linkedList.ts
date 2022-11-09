@@ -24,9 +24,9 @@ const map = <A, B>(f: (el: A) => B, l: List<A>): List<B> => {   //recursion
 
 const l = append(3, append(2, append(1, empty)));
 const x = map((x) => x + 1, l);
+
 console.log(l);
 console.log(x);
-
 
 
 

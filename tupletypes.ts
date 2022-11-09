@@ -21,7 +21,7 @@ doSomething(["hello", 42]);
 
 function ddoSomething(pair: [string, number]) {
     //...
-    const c = pair[2];
+    const l = pair[2];
 //Tuple type '[string, number]' of length '2' has no element at index '2'.
 }
 
