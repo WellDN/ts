@@ -1,17 +1,14 @@
 function shuffle<A> (array: A[]): A[] {
-    const result = [...array]
-    
+    const a = [...array];
     let j, x, i
 
-    for (i = result.length - 1; i > 0; i--) {
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1))
 
-        j = Math.floor(Math.random() * (i - 1))
+        x = a[i];
 
-        x = result[i]
-
-        result[i] = result[j]
-
-        result[j] = x;
+        a[i] = a[j];
+        a[j] = x;
     }
-    return result;
+    return a;
 }
